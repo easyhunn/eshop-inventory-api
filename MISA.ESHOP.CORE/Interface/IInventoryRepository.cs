@@ -64,5 +64,23 @@ namespace MISA.ESHOP.Core.Interface
         /// </param>
         /// <returns></returns>
         public int UpdateMaxSKUCode(InventoryCodeEntity inventoryCodeEntity);
+        /// <summary>
+        /// Kiểm tra trùng mã SKU
+        /// </summary>
+        /// <param name="SKUCode">mã SKU code</param>
+        /// <param name="inventoryId">mã id</param>
+        /// <returns>
+        /// thông tin hàng hoá trùng
+        /// null
+        /// </returns>
+        public Inventory CheckDuplicateSKUCode(string SKUCode, Guid inventoryId);
+        /// <summary>
+        /// SỬ mã SKU
+        /// </summary>
+        /// <param name="SKUCode"></param>
+        /// <returns>
+        /// Số lượng bản ghi ảnh hưởng
+        /// </returns>
+        public int UpdateSKUCode(String SKUCode);
     }
 }

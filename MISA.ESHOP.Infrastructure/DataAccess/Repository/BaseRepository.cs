@@ -83,6 +83,7 @@ namespace MISA.ESHOP.Infrastructure.DataAccess.Repository
         public int UpdateEntity(Guid id, Entity entity)
         {
             var storeName = $"Proc_Update{_className}";
+
             var rowEffect = dbConnection.Execute(storeName, entity, commandType: CommandType.StoredProcedure);
             return rowEffect;
         }

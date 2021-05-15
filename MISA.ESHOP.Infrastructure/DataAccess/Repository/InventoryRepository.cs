@@ -58,7 +58,25 @@ namespace MISA.ESHOP.Infrastructure.DataAccess.Repository
             var inventory = dbConnection.Query<Inventory>(storeName, parameters, commandType: CommandType.StoredProcedure).FirstOrDefault();
             return inventory;
         }
+        /// <summary>
+        /// Kiểm tra trùng mã SKU
+        /// </summary>
+        /// <param name="SKUCode">mã SKU code</param>
+        /// <param name="inventoryId">mã id</param>
+        /// <returns>
+        /// thông tin hàng hoá trùng
+        /// null
+        /// </returns>
+        public Inventory CheckDuplicateSKUCode(string SKUCode, Guid inventoryId)
+        {
+            var storeName = "Proc_CheckDuplicateSKUCode";
+            var parameters = new DynamicParameters();
+            parameters.Add($"@SKUCode", SKUCode, DbType.String);
+            parameters.Add($"@InventoryId", inventoryId, DbType.String);
 
+            var inventory = dbConnection.Query<Inventory>(storeName, parameters, commandType: CommandType.StoredProcedure).FirstOrDefault();
+            return inventory;
+        }
         public int GetMaxSKUCode(string prefix)
         {
             var storeName = "Proc_GetMaxCode";
@@ -73,7 +91,14 @@ namespace MISA.ESHOP.Infrastructure.DataAccess.Repository
             var storeName = $"Proc_UpdateMaxCode";
             var rowEffect = dbConnection.Execute(storeName, inventoryCodeEntity, commandType: CommandType.StoredProcedure);
             return rowEffect;
-
+        }
+        public int UpdateSKUCode(String SKUCode)
+        {
+            var parameters = new DynamicParameters();
+            parameters.Add($"@SKUCode", SKUCode, DbType.String);
+            var storeName = $"Proc_UpdateSKUCode";
+            var rowEffect = dbConnection.Execute(storeName, parameters, commandType: CommandType.StoredProcedure);
+            return rowEffect;
         }
     }
 }

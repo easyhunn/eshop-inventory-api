@@ -166,11 +166,11 @@ namespace MISA.ESHOP.Core.Service
         }
         #region Validate
 
-        public override ServiceResult InventoryValidate(Inventory inventory, Guid? id)
+        public override ServiceResult InventoryValidate(Inventory inventory, Guid id)
         {
             serviceResult.isValid = true;
             ValidateInformation(inventory);
-            if (serviceResult.isValid) ValidCode(inventory.SKUCode, id);
+            if (serviceResult.isValid && id != Guid.Empty) ValidCode(inventory.SKUCode, id);
             return this.serviceResult;
         }
         /// <summary>
@@ -201,10 +201,11 @@ namespace MISA.ESHOP.Core.Service
             }
         }
 
-        public void ValidCode(String SKUCode, Guid? id)
+        public void ValidCode(String SKUCode, Guid id)
         {
-            Inventory inventory = _inventoryRepository.GetInventoryBySKUCode(SKUCode);
-            if (inventory != null && inventory.InventoryId != id)
+            Inventory inventory = _inventoryRepository.CheckDuplicateSKUCode(SKUCode, id);
+
+            if (inventory != null)
             {
                 serviceResult.errorCode = MISACode.badRequest;
                 serviceResult.message = Properties.Resources.DuplicateSKUCode;

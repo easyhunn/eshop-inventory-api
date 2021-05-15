@@ -100,7 +100,7 @@ namespace MISA.ESHOP.Core.Service
 
             serviceResult.isValid = true;
             //kiêm tra thông tin cửa hàng
-            ValidateEntity(entity, null);
+            ValidateEntity(entity, Guid.Empty);
             if (!serviceResult.isValid)
             {
                 serviceResult.isValid = false;
@@ -164,7 +164,7 @@ namespace MISA.ESHOP.Core.Service
 
         }
         #region Xử lý nghiệp vụ
-        public void ValidateEntity(Entity entity, Guid? id)
+        public void ValidateEntity(Entity entity, Guid id)
         {
             //check đủ thông tin bắt buộc
             //if (!ValidateInformation(entity)) return false;
@@ -181,7 +181,7 @@ namespace MISA.ESHOP.Core.Service
         /// Hàm xử lý nghiệp vụ riêng
         /// </summary>
         /// <returns></returns>
-        public virtual ServiceResult InventoryValidate(Entity inventory, Guid? id) {
+        public virtual ServiceResult InventoryValidate(Entity inventory, Guid id) {
             return this.serviceResult;
         }
 

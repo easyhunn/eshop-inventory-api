@@ -65,7 +65,7 @@ namespace MISA.ESHOP.Controllers
             var res = _inventoryService.UpdateMaxSKUCode(inventoryCodeEntity);
             if (res.isValid) return Ok(res.message);
             else
-            {
+            {   
                 if (res.errorCode == MISACode.badRequest)
                     return StatusCode(400, res);
                 else return StatusCode(204, res);

@@ -151,7 +151,7 @@ namespace MISA.ESHOP.Controllers
         /// <param name="listId"></param>
         /// <returns></returns>
         [HttpDelete("multiple")]
-        public IActionResult DeleteEntities([FromBody]String listId)
+        public IActionResult DeleteEntities(String listId)
         {
 
             var res = _baseService.DeleteEntities(listId);
