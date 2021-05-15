@@ -1,0 +1,17 @@
+D:\Code\Eshop\eshop-api\MISA.ESHOP\MISA.ESHOP.Core\bin\Debug\net5.0\MISA.ESHOP.Core.deps.json
+D:\Code\Eshop\eshop-api\MISA.ESHOP\MISA.ESHOP.Core\bin\Debug\net5.0\MISA.ESHOP.Core.dll
+D:\Code\Eshop\eshop-api\MISA.ESHOP\MISA.ESHOP.Core\bin\Debug\net5.0\ref\MISA.ESHOP.Core.dll
+D:\Code\Eshop\eshop-api\MISA.ESHOP\MISA.ESHOP.Core\bin\Debug\net5.0\MISA.ESHOP.Core.pdb
+D:\Code\Eshop\eshop-api\MISA.ESHOP\MISA.ESHOP.Core\bin\Debug\net5.0\MISA.ESHOP.Common.dll
+D:\Code\Eshop\eshop-api\MISA.ESHOP\MISA.ESHOP.Core\bin\Debug\net5.0\MISA.ESHOP.Common.pdb
+D:\Code\Eshop\eshop-api\MISA.ESHOP\MISA.ESHOP.Core\obj\Debug\net5.0\MISA.ESHOP.Core.csprojAssemblyReference.cache
+D:\Code\Eshop\eshop-api\MISA.ESHOP\MISA.ESHOP.Core\obj\Debug\net5.0\MISA.ESHOP.Core.Properties.Resources.resources
+D:\Code\Eshop\eshop-api\MISA.ESHOP\MISA.ESHOP.Core\obj\Debug\net5.0\MISA.ESHOP.Core.csproj.GenerateResource.cache
+D:\Code\Eshop\eshop-api\MISA.ESHOP\MISA.ESHOP.Core\obj\Debug\net5.0\MISA.ESHOP.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\Code\Eshop\eshop-api\MISA.ESHOP\MISA.ESHOP.Core\obj\Debug\net5.0\MISA.ESHOP.Core.AssemblyInfoInputs.cache
+D:\Code\Eshop\eshop-api\MISA.ESHOP\MISA.ESHOP.Core\obj\Debug\net5.0\MISA.ESHOP.Core.AssemblyInfo.cs
+D:\Code\Eshop\eshop-api\MISA.ESHOP\MISA.ESHOP.Core\obj\Debug\net5.0\MISA.ESHOP.Core.csproj.CoreCompileInputs.cache
+D:\Code\Eshop\eshop-api\MISA.ESHOP\MISA.ESHOP.Core\obj\Debug\net5.0\MISA.ESHOP.Core.csproj.CopyComplete
+D:\Code\Eshop\eshop-api\MISA.ESHOP\MISA.ESHOP.Core\obj\Debug\net5.0\MISA.ESHOP.Core.dll
+D:\Code\Eshop\eshop-api\MISA.ESHOP\MISA.ESHOP.Core\obj\Debug\net5.0\ref\MISA.ESHOP.Core.dll
+D:\Code\Eshop\eshop-api\MISA.ESHOP\MISA.ESHOP.Core\obj\Debug\net5.0\MISA.ESHOP.Core.pdb

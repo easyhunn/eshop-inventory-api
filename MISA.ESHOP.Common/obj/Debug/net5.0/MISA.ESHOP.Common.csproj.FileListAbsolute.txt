@@ -1,0 +1,12 @@
+D:\Code\Eshop\eshop-api\MISA.ESHOP\MISA.ESHOP.Common\bin\Debug\net5.0\MISA.ESHOP.Common.deps.json
+D:\Code\Eshop\eshop-api\MISA.ESHOP\MISA.ESHOP.Common\bin\Debug\net5.0\MISA.ESHOP.Common.dll
+D:\Code\Eshop\eshop-api\MISA.ESHOP\MISA.ESHOP.Common\bin\Debug\net5.0\ref\MISA.ESHOP.Common.dll
+D:\Code\Eshop\eshop-api\MISA.ESHOP\MISA.ESHOP.Common\bin\Debug\net5.0\MISA.ESHOP.Common.pdb
+D:\Code\Eshop\eshop-api\MISA.ESHOP\MISA.ESHOP.Common\obj\Debug\net5.0\MISA.ESHOP.Common.csprojAssemblyReference.cache
+D:\Code\Eshop\eshop-api\MISA.ESHOP\MISA.ESHOP.Common\obj\Debug\net5.0\MISA.ESHOP.Common.GeneratedMSBuildEditorConfig.editorconfig
+D:\Code\Eshop\eshop-api\MISA.ESHOP\MISA.ESHOP.Common\obj\Debug\net5.0\MISA.ESHOP.Common.AssemblyInfoInputs.cache
+D:\Code\Eshop\eshop-api\MISA.ESHOP\MISA.ESHOP.Common\obj\Debug\net5.0\MISA.ESHOP.Common.AssemblyInfo.cs
+D:\Code\Eshop\eshop-api\MISA.ESHOP\MISA.ESHOP.Common\obj\Debug\net5.0\MISA.ESHOP.Common.csproj.CoreCompileInputs.cache
+D:\Code\Eshop\eshop-api\MISA.ESHOP\MISA.ESHOP.Common\obj\Debug\net5.0\MISA.ESHOP.Common.dll
+D:\Code\Eshop\eshop-api\MISA.ESHOP\MISA.ESHOP.Common\obj\Debug\net5.0\ref\MISA.ESHOP.Common.dll
+D:\Code\Eshop\eshop-api\MISA.ESHOP\MISA.ESHOP.Common\obj\Debug\net5.0\MISA.ESHOP.Common.pdb

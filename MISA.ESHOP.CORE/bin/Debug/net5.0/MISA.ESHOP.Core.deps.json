@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "MISA.ESHOP.Core/1.0.0": {
+        "dependencies": {
+          "MISA.ESHOP.Common": "1.0.0"
+        },
+        "runtime": {
+          "MISA.ESHOP.Core.dll": {}
+        }
+      },
+      "MISA.ESHOP.Common/1.0.0": {
+        "runtime": {
+          "MISA.ESHOP.Common.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "MISA.ESHOP.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MISA.ESHOP.Common/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
