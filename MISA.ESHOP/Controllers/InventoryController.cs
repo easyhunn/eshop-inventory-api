@@ -114,5 +114,24 @@ namespace MISA.ESHOP.Controllers
                 return StatusCode(204, res);
             }
         }
+        [HttpPost("detail")]
+        public IActionResult InsertInventoryDetail(Inventory inventory)
+        {
+            //thêm dữ liệu  
+            var res = _inventoryService.InsertInventoryDetail(inventory);
+            //kiểm tra thêm thành công
+            if (res.isValid)
+            {
+                return StatusCode(201, res.message);
+            }
+            else
+            {
+                if (res.errorCode == MISACode.badRequest)
+                {
+                    return StatusCode(400, res);
+                }
+                return StatusCode(200, res.message);
+            }
+        }
     }
 }

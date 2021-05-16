@@ -68,6 +68,14 @@ namespace MISA.ESHOP.Core.Interface
         /// </returns>
         /// CreatedBy: VM Hùng (12/05/2021)
         public ServiceResult UpdateMaxSKUCode(InventoryCodeEntity inventoryCodeEntity);
+        /// <summary>
+        /// Thêm mới 1 chi tiết hàng hoá
+        /// </summary>
+        /// <param name="inventory">thông tin hàng hoá</param>
+        /// <returns>
+        /// Kết quả việc thêm 
+        /// </returns>
+        public ServiceResult InsertInventoryDetail(Inventory inventory);
     }
 }
 

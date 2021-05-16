@@ -107,6 +107,72 @@ namespace MISA.ESHOP.Core.Service
             }
             return serviceResult;
         }
+        public ServiceResult InsertInventoryDetail(Inventory inventory)
+        {
+            serviceResult.isValid = true;
+            //Lấy thông tin hàng hoá theo id
+           
+            var availableInventory = _inventoryRepository.GetById(inventory.InventoryId);
+            //Nếu đã tồn tại thực hiện cập nhật
+            if (availableInventory != null && inventory.InventoryId != Guid.Empty)
+            {
+                // kiểm tra dữ liệu
+                InventoryValidate(inventory, inventory.InventoryId);
+                if (!serviceResult.isValid)
+                {
+                    serviceResult.isValid = false;
+                    return serviceResult;
+                }
+                //Thực hiện update
+                var res = _inventoryRepository.UpdateEntity(inventory.InventoryId, inventory);
+                //kiểm tra số lượng bản ghi được update
+                if (res == 0)
+                {
+                    serviceResult.message = Properties.Resources.Msg_NoContent;
+                    serviceResult.errorCode = MISACode.noContent;
+                    serviceResult.isValid = false;
+                }
+                else
+                {
+                    serviceResult.message = Properties.Resources.Msg_Success;
+                    serviceResult.errorCode = MISACode.success;
+                    updateMaxCode(inventory);
+
+                }
+            } else
+            {
+                //Thực hiện thêm mới 1 hàng hoá
+                serviceResult.isValid = true;
+                //kiêm tra thông tin cửa hàng
+                ValidateEntity(inventory, Guid.Empty);
+                if (!serviceResult.isValid)
+                {
+                    serviceResult.isValid = false;
+                    return serviceResult;
+                }
+                //Thêm mới cửa hàng
+                var rowEffect = _inventoryRepository.InsertEntity(inventory);
+                //kiểm tra thêm bản ghi mới thành công
+                if (rowEffect == 0)
+                {
+                    // Nếu thêm bản ghi không thành công
+                    serviceResult.message = Properties.Resources.Msg_NoContent;
+                    serviceResult.isValid = false;
+                    serviceResult.errorCode = MISACode.success;
+                }
+                else
+                {
+                    //Nếu thêm bản ghi thành công
+                    serviceResult.message = Properties.Resources.Msg_InsertSuccess;
+                    serviceResult.isValid = true;
+                    //cập nhật mã
+                    updateMaxCode(inventory);
+                }
+            }
+            
+            return serviceResult;
+        }
+
         #endregion
         public override void updateMaxCode(Inventory inventory)
         {
