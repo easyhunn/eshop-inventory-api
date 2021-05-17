@@ -80,7 +80,16 @@ namespace MISA.ESHOP.Controllers
             }
             else
             {
-                return StatusCode(204, res);
+                
+                if (res.errorCode == MISACode.noContent)
+                {
+                    return StatusCode(204, res);
+
+                } else
+                {
+                    return StatusCode(500, res);
+
+                }
             }
 
         }
@@ -141,7 +150,8 @@ namespace MISA.ESHOP.Controllers
                 if (res.errorCode == MISACode.badRequest)
                 {
                     return StatusCode(400, res);
-                }
+                } 
+                
                 return StatusCode(200, res.message);
             }
         }
@@ -162,7 +172,13 @@ namespace MISA.ESHOP.Controllers
             }
             else
             {
-                return StatusCode(204, res);
+                if (res.errorCode == MISACode.inernalException)
+                {
+                    return StatusCode(500, res);
+                } else
+                {
+                    return StatusCode(204, res);
+                }
             }
         }
     }

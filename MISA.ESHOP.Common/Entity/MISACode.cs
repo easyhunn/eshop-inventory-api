@@ -15,5 +15,7 @@ namespace MISA.ESHOP.Common.Entity
         public static readonly String success = "002";
         public static readonly String noContent = "402";
         public static readonly String badRequest = "004";
+        public static readonly String inernalException = "005";
+
     }
 }

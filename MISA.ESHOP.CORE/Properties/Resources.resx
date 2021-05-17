@@ -126,6 +126,9 @@
   <data name="EmptySKUCode" xml:space="preserve">
     <value>Mã SKU không được phé để trống!</value>
   </data>
+  <data name="Msg_CantDeleteItemGenerated" xml:space="preserve">
+    <value>Không thể xoá bản ghi đã có phát sinh</value>
+  </data>
   <data name="Msg_DeleteSuccess" xml:space="preserve">
     <value>Xoá thành công!</value>
   </data>

@@ -88,6 +88,15 @@ namespace MISA.ESHOP.Core.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Không thể xoá bản ghi đã có phát sinh.
+        /// </summary>
+        public static string Msg_CantDeleteItemGenerated {
+            get {
+                return ResourceManager.GetString("Msg_CantDeleteItemGenerated", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Xoá thành công!.
         /// </summary>
         public static string Msg_DeleteSuccess {

@@ -63,7 +63,7 @@ namespace MISA.ESHOP.Core.Service
         }
 
         public ServiceResult DeleteEntity(Guid id)
-        {
+        {   
             serviceResult.isValid = true;
             var rowEffect = _baseRepository.DeleteEntity(id);
             if (rowEffect == 0)
@@ -74,6 +74,12 @@ namespace MISA.ESHOP.Core.Service
             }
             else
             {
+                if (rowEffect == -1)
+                {
+                    serviceResult.isValid = false;
+                    serviceResult.errorCode = MISACode.inernalException;
+                    return serviceResult;
+                }
                 serviceResult.message = Properties.Resources.Msg_DeleteSuccess;
                 return serviceResult;
             }
@@ -81,6 +87,7 @@ namespace MISA.ESHOP.Core.Service
         public ServiceResult DeleteEntities(string listId)
         {
             serviceResult.isValid = true;
+            int idQuantity = listId.Count(ch => ch == ',') + 1;
             var rowEffect = _baseRepository.DeleteEntities(listId);
             if (rowEffect == 0)
             {
@@ -90,6 +97,12 @@ namespace MISA.ESHOP.Core.Service
             }
             else
             {
+                if (rowEffect < idQuantity)
+                {
+                    serviceResult.isValid = false;
+                    serviceResult.errorCode = MISACode.inernalException;
+                    return serviceResult;
+                }
                 serviceResult.message = Properties.Resources.Msg_DeleteSuccess;
                 return serviceResult;
             }

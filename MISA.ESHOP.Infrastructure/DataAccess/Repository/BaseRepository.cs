@@ -46,7 +46,15 @@ namespace MISA.ESHOP.Infrastructure.DataAccess.Repository
             var parameters = new DynamicParameters();
             parameters.Add($"@{_className}Id", id, DbType.String);
             var storeName = $"Proc_Delete{_className}";
-            var rowEffect = dbConnection.Execute(storeName, parameters, commandType: CommandType.StoredProcedure);
+            var rowEffect = 0;
+            try
+            {
+                rowEffect = dbConnection.Execute(storeName, parameters, commandType: CommandType.StoredProcedure);
+            } catch (Exception e)
+            {
+                rowEffect = -1;
+            }
+            
             return rowEffect;
         }
 
@@ -54,6 +62,7 @@ namespace MISA.ESHOP.Infrastructure.DataAccess.Repository
         {
             var correctClassName = _className;
             var classNameLength = correctClassName.Length;
+            if (correctClassName[classNameLength - 1] == 'y')
             if (correctClassName[classNameLength - 1] == 'y')
             {
                 correctClassName = correctClassName.Substring(0, classNameLength - 1) + "ie";
