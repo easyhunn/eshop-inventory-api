@@ -71,6 +71,26 @@ namespace MISA.ESHOP.Controllers
                 else return StatusCode(204, res);
             }
         }
+        /// <summary>
+        /// Lấy danh sách hàng hoá phân trang
+        /// </summary>
+        /// <param name="pageIndex">Thứ tự trang</param>
+        /// <param name="pageSize">kích thước trang</param>
+        /// <param name="SKUCode">Mã SKU</param>
+        /// <param name="inventoryName">Tên hàng hoá</param>
+        /// <param name="inventoryGroup">Nhóm hàng hoá</param>
+        /// <param name="unit">Đơn vị</param>
+        /// <param name="salePrice">Giá bán</param>
+        /// <param name="status">Trạng thái</param>
+        /// <param name="display">Hiển thị</param>
+        /// <param name="SKUCodeType">Kiểu lọc của mã SKU</param>
+        /// <param name="inventoryNameType">Kiểm lọc của tên hàng hoá</param>
+        /// <param name="inventoryGroupType">Kiểu lọc của nhóm hàng hoá</param>
+        /// <param name="unitType">Kiểu lọc đơn vị</param>
+        /// <param name="salePriceType">Kiểu lọc giá bán</param>
+        /// <returns>
+        /// Danh sách hàng hoá sua lọc phân trang
+        /// </returns>
         [HttpGet("paging")]
         public IActionResult GetInventoriesPaging(int pageIndex, 
                                                     int pageSize, 

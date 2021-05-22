@@ -181,7 +181,7 @@ namespace MISA.ESHOP.Core.Service
         {
             //check đủ thông tin bắt buộc
             //if (!ValidateInformation(entity)) return false;
-            ServiceResult entityServiceResult = InventoryValidate(entity, id);
+            ServiceResult entityServiceResult = EntityValidate(entity, id);
             if (!entityServiceResult.isValid)
             {
                 this.serviceResult = entityServiceResult;
@@ -194,7 +194,7 @@ namespace MISA.ESHOP.Core.Service
         /// Hàm xử lý nghiệp vụ riêng
         /// </summary>
         /// <returns></returns>
-        public virtual ServiceResult InventoryValidate(Entity inventory, Guid id) {
+        public virtual ServiceResult EntityValidate(Entity entity, Guid oldId) {
             return this.serviceResult;
         }
 

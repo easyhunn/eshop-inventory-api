@@ -117,7 +117,7 @@ namespace MISA.ESHOP.Core.Service
             if (availableInventory != null && inventory.InventoryId != Guid.Empty)
             {
                 // kiểm tra dữ liệu
-                InventoryValidate(inventory, inventory.InventoryId);
+                EntityValidate(inventory, inventory.InventoryId);
                 if (!serviceResult.isValid)
                 {
                     serviceResult.isValid = false;
@@ -232,11 +232,11 @@ namespace MISA.ESHOP.Core.Service
         }
         #region Validate
 
-        public override ServiceResult InventoryValidate(Inventory inventory, Guid id)
+        public override ServiceResult EntityValidate(Inventory inventory, Guid oldId)
         {
             serviceResult.isValid = true;
             ValidateInformation(inventory);
-            if (serviceResult.isValid && id != Guid.Empty) ValidCode(inventory.SKUCode, id);
+            if (serviceResult.isValid) ValidCode(inventory.SKUCode, oldId);
             return this.serviceResult;
         }
         /// <summary>
